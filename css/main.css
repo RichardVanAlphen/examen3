@@ -6,6 +6,7 @@ body {
 header {
     display:inline-block;
     width: 100%;
+    min-width: 950px;
     height: 15em;
     background-color: #f57114;
     color: white;
@@ -25,6 +26,7 @@ nav {
     border-color: #f4c102;
     border-width: 0px;
     border-bottom-width: 5px;
+    min-width: 950px;
 }
 ul {
     padding: 0px;
@@ -63,6 +65,7 @@ aside {
 }
 footer {
     height: 120px;
+    min-width: 950px;
     display:flex;
     background-color:#d15f0f;
     justify-content: center;
@@ -184,7 +187,7 @@ select {
 
 
 /*Mobile*/
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
     li.nav{
         display: block;
         padding: 20px;
@@ -202,6 +205,7 @@ select {
     }
     main{
         display: inline-block;
+        width: 100%;
     }
     #inhoud {
         display: block;
