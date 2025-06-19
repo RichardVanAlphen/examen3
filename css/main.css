@@ -181,7 +181,7 @@ select {
 
 
 /*Mobile*/
-@media only screen and (max-width: 700px/*verander later naar 600*/) {
+@media only screen and (max-width: 600px) {
     li.nav{
         display: block;
         padding: 20px;
