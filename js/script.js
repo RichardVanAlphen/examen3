@@ -1,0 +1,50 @@
+$(document).ready(function(){
+    // Laden artiekelen
+    $('#inhoud').load('../html/blogArtiekelen.html .preview', function(){
+        $('.oldArticle').hide();
+        $('.fullVersion').hide();
+    });
+
+    // Animaties
+    // Artiekel openen/sluiten
+    $('#inhoud').on('click', '#cursus', function(){
+        $('#cursusFullVersion').slideToggle();
+        $('#aanmelding').slideToggle();
+        $('#docent').slideToggle();
+    });
+    $('#inhoud').on('click', '#aanmelding', function(){
+        $('#aanmeldingFullVersion').slideToggle();
+        $('#cursus').slideToggle();
+        $('#docent').slideToggle();
+    });
+    $('#inhoud').on('click', '#docent', function(){
+        $('#docentFullVersion').slideToggle();
+        $('#cursus').slideToggle();
+        $('#aanmelding').slideToggle();
+    });
+
+    // Article form
+    $('input.datepicker').Zebra_DatePicker();
+    $('#addTitle').on('click', function(){
+        $('#articleTable').append('<tr><td><label for="titel">Titel</label></td></tr>');
+        $('#articleTable').append('<tr><td><tr><td><textarea name="titel" placeholder="Uw titel hier" maxlength="1500"></textarea></td></tr>');
+    });
+    $('#addParagraph').on('click', function(){
+        $('#articleTable').append('<tr><td><label for="paragraaf">Paragraaf</label></td></tr>');
+        $('#articleTable').append('<tr><td><textarea name="paragraaf" placeholder="Uw paragraaf hier" maxlength="1500"></textarea></td></tr>');
+    });
+    $('#btnOpslaan').on('click', function(event){
+        event.preventDefault();
+        const date = $('#datepicker').val();
+        const auteur = $('#auteurInput').val();
+        const titel = $('#titelInput').val();
+        const paragraaf = $('#paragraafInput').val();
+
+        if(date !== '' && auteur !== '' && titel !== '' && paragraaf !== ''){
+            alert('Artiekel opgeslagen.');
+        }
+        else{
+            alert('Zorg er voor dat alles is ingevuld.');
+        };
+    });
+});
