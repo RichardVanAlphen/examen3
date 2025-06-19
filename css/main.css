@@ -122,6 +122,9 @@ article.preview:hover {
     margin-left: 5px;
     font-weight: bold;
 }
+.popOut li {
+    margin-bottom: 10px;
+}
 #btnNewArticle {
     margin-top: 25px;
 }
