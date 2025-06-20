@@ -7,28 +7,28 @@ $(document).ready(function(){
 
     // Artiekel openen/sluiten
     // Aside knoppen
-    $('#cursus').on('click', function(){
+    $('#btncursus').on('click', function(){
         $('#cursusFullVersion').slideToggle();
         $('#aanmelding').slideToggle();
         $('#docent').slideToggle();
     });
-    $('#aanmelding').on('click', function(){
+    $('#btnaanmelding').on('click', function(){
         $('#aanmeldingFullVersion').slideToggle();
         $('#cursus').slideToggle();
         $('#docent').slideToggle();
     });
-    $('#docent').on('click', function(){
+    $('#btndocent').on('click', function(){
         $('#docentFullVersion').slideToggle();
         $('#cursus').slideToggle();
         $('#aanmelding').slideToggle();
     });
-    $('#onderhoud').on('click', function(){
+    $('#btnonderhoud').on('click', function(){
         $('#onderhoud').slideToggle();
         $('#cursus').slideToggle();
         $('#aanmelding').slideToggle();
         $('#docent').slideToggle();
     });
-    $('#opening').on('click', function(){
+    $('#btnopening').on('click', function(){
         $('#opening').slideToggle();
         $('#cursus').slideToggle();
         $('#aanmelding').slideToggle();
