@@ -8,31 +8,27 @@ $(document).ready(function(){
     // Artiekel openen/sluiten
     // Aside knoppen
     $('#btnCursus').on('click', function(){
-        $('#cursusFullVersion').slideToggle();
-        $('#aanmelding').slideToggle();
-        $('#docent').slideToggle();
+        $('.close').slideUp();
+        $('#cursus').slideDown();
+        $('#cursusFullVersion').slideDown();
     });
     $('#btnAanmelding').on('click', function(){
-        $('#aanmeldingFullVersion').slideToggle();
-        $('#cursus').slideToggle();
-        $('#docent').slideToggle();
+        $('.close').slideUp();
+        $('#aanmelding').slideDown();
+        $('#aanmeldingFullVersion').slideDown();
     });
     $('#btnDocent').on('click', function(){
-        $('#docentFullVersion').slideToggle();
-        $('#cursus').slideToggle();
-        $('#aanmelding').slideToggle();
+        $('.close').slideUp();
+        $('#docent').slideDown();
+        $('#docentFullVersion').slideDown();
     });
     $('#btnOnderhoud').on('click', function(){
-        $('#onderhoud').slideToggle();
-        $('#cursus').slideToggle();
-        $('#aanmelding').slideToggle();
-        $('#docent').slideToggle();
+        $('.close').slideUp();
+        $('#onderhoud').slideDown();
     });
     $('#btnOpening').on('click', function(){
-        $('#opening').slideToggle();
-        $('#cursus').slideToggle();
-        $('#aanmelding').slideToggle();
-        $('#docent').slideToggle();
+        $('.close').slideUp();
+        $('#opening').slideDown();
     });
     // Artiekel onClick
     $('.blogInhoud').on('click', '#cursus', function(){
