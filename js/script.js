@@ -1,6 +1,6 @@
 $(document).ready(function(){
     // Laden artiekelen
-    $('.blogInhoud').load('../html/blogArtiekelen.html .preview', function(){
+    $('.blogInhoud').load('../html/blogArtiekelen.html', function(){
         $('.oldArticle').hide();
         $('.fullVersion').hide();
     });
