@@ -5,8 +5,36 @@ $(document).ready(function(){
         $('.fullVersion').hide();
     });
 
-    // Animaties
     // Artiekel openen/sluiten
+    // Aside knoppen
+    $('#cursus').on('click', function(){
+        $('#cursusFullVersion').slideToggle();
+        $('#aanmelding').slideToggle();
+        $('#docent').slideToggle();
+    });
+    $('#aanmelding').on('click', function(){
+        $('#aanmeldingFullVersion').slideToggle();
+        $('#cursus').slideToggle();
+        $('#docent').slideToggle();
+    });
+    $('#docent').on('click', function(){
+        $('#docentFullVersion').slideToggle();
+        $('#cursus').slideToggle();
+        $('#aanmelding').slideToggle();
+    });
+    $('#onderhoud').on('click', function(){
+        $('#onderhoud').slideToggle();
+        $('#cursus').slideToggle();
+        $('#aanmelding').slideToggle();
+        $('#docent').slideToggle();
+    });
+    $('#opening').on('click', function(){
+        $('#opening').slideToggle();
+        $('#cursus').slideToggle();
+        $('#aanmelding').slideToggle();
+        $('#docent').slideToggle();
+    });
+    // Artiekel onClick
     $('.blogInhoud').on('click', '#cursus', function(){
         $('#cursusFullVersion').slideToggle();
         $('#aanmelding').slideToggle();
