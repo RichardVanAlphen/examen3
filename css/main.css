@@ -1,16 +1,15 @@
 /*PC*/
-/*Base*/
 body {
     margin: 0px;
     font-family:Verdana, Geneva, Tahoma, sans-serif
 }
 header {
     display:inline-block;
-    color: white;
-    background-color: #f57114;
     width: 100%;
     min-width: 768px;
     height: 300px;
+    background-color: #f57114;
+    color: white;
 }
 .center {
     display: flex;
@@ -33,8 +32,8 @@ ul {
     margin: 0px;
 }
 ul a{
-    text-decoration: none;
     color: white;
+    text-decoration: none;
     padding: 15px;
     padding-left: 17px;
     padding-right: 17px;
@@ -57,10 +56,10 @@ main {
 }
 aside {
     display: inline-block;
-    background-color: #ffb785;
     margin: 0px;
     padding-right: 20px;
     padding-left: 20px;
+    background-color: #ffb785;
 }
 #inhoud {
     display: inline-block;
@@ -68,10 +67,10 @@ aside {
     padding-right: 1%;
 }
 footer {
+    height: 120px;
+    min-width: 950px;
     display:flex;
     background-color:#d15f0f;
-    height: 120px;
-    min-width: 768px;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -79,26 +78,17 @@ footer {
 footer ul{
     list-style-type: none;
 }
-/*Home*/
+img {
+    width: 400px;
+    margin: 5px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
 h1 {
     margin-top: 40px;
 }
 .titelKleur {
     color: #d15f0f;
-}
-.onderTitel {
-    font-weight: bold;
-}
-#imgTrompet {
-    width: 100%;
-    padding-top: 15px;
-    padding-bottom: 15px;
-}
-#imgTrompetSpeler {
-    width: 360px;
-}
-#imgSaxofoon {
-    width: 360px;
 }
 /*over ons*/
 .overOnsArticle {
@@ -108,22 +98,29 @@ h1 {
 .overOnsArticle p {
     margin-bottom: 30px;
 }
-#imgGroot {
-    width: 100%;
-    padding-top: 15px;
-    padding-bottom: 15px;
-}
 #fotoHannah {
     float: right;
-    width: 30%;
-    max-width: 290px;
+    width: auto;
+    height: 500px;
 }
 #fotoJesse {
     float: left;
-    width: 30%;
-    max-width: 290px;
+    width: auto;
+    height: 500px;
 }
 /*blog*/
+article {
+    border-radius: 10px;
+    background-color: rgb(255 222 199);
+    padding: 5px;
+    margin-bottom: 10px;
+}
+article:hover {
+    border-radius: 10px;
+    background-color: #ffb785;
+    padding: 5px;
+    margin-bottom: 10px;
+}
 .popOut {
     list-style-type: none;
 }
@@ -137,37 +134,19 @@ h1 {
 #btnNewArticle {
     margin-top: 25px;
 }
-.blogInhoud article {
-    border-radius: 10px;
-    background-color: rgb(255 222 199);
-    padding: 5px;
-    margin-bottom: 10px;
-}
-.blogInhoud article:hover {
-    border-radius: 10px;
-    background-color: #ffb785;
-    padding: 5px;
-    margin-bottom: 10px;
-}
 /*article form*/
 #labelToevoegen {
     font-weight: bold;
     font-size: large;
 }
-#datepicker {
-    width: auto;
+#articleForm textarea {
+    width: 500px;
 }
 #auteurInput {
     width: 500px;
-    border-radius: 5px;
 }
 #articleForm input {
     margin-left: 2px;
-    border-radius: 5px;
-}
-#articleForm textarea {
-    width: 500px;
-    border-radius: 5px;
 }
 #btnOpslaan {
     width: 100px;
@@ -176,25 +155,29 @@ h1 {
     background-color: #d15f0f;
     border-style: none;
 }
+/*tarieven streepjes*/
+hr {
+    margin-right: 20px;
+}
 /*contact*/
 iframe {
-    width: 100%;
-    height: 400px;
+    width: 450px;
+    height: 450px;
 }
 form table{
     width: 100%;
 }
 input  {
     border-radius: 5px;
-    width: 100%;
+    width: 96%;
 }
-#contactForm select {
+select {
     border-radius: 5px;
-    width: 100.75%;
+    width: 96.5%;
 }
 #contactForm textarea {
     border-radius: 5px;
-    width: 100%;
+    width: 96%;
     height: 200px;
 }
 #btnVerzend {
@@ -205,8 +188,70 @@ input  {
     border-style: none;
 }
 
-
 /*Mobile*/
 @media only screen and (max-width: 768px) {
-
+    li.nav{
+        display: block;
+        padding: 20px;
+    }
+    nav ul{
+        width: 100%;
+    }
+    nav li{
+        text-align: center;
+    }
+    aside{
+        display: block;
+        padding-top: 10px;
+        padding-bottom: 20px;
+    }
+    main{
+        display: inline-block;
+        width: 100%;
+    }
+    #inhoud {
+        display: block;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+    }
+    img {
+        width: 150px;
+    }
+    .imgGroot {
+        width: 90%;
+    }
+    #fotoHannah {
+        float: right;
+        width: auto;
+        height: 200px;
+    }
+    #fotoJesse {
+        float: left;
+        width: auto;
+        height: 200px;
+    }
+    iframe {
+        width: 99%;
+        height: 450px;
+    }
+    form table{
+        width: 100%;
+    }
+    input  {
+        border-radius: 5px;
+        width: 96%;
+    }
+    select {
+        border-radius: 5px;
+        width: 96.5%;
+    }
+    textarea {
+        border-radius: 5px;
+        width: 96%;
+        height: 200px;
+    }
+    #btnVerzend {
+        width: 100px;
+    }
 }
