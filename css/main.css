@@ -1,20 +1,20 @@
 /*PC*/
+/*Base*/
 body {
     margin: 0px;
     font-family:Verdana, Geneva, Tahoma, sans-serif
 }
 header {
     display:inline-block;
-    width: 100%;
-    min-width: 950px;
-    height: 15em;
-    background-color: #f57114;
     color: white;
+    background-color: #f57114;
+    width: 100%;
+    min-width: 768px;
+    height: 300px;
 }
 .center {
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 h1.center {
     padding-top: 50px;
@@ -26,48 +26,52 @@ nav {
     border-color: #f4c102;
     border-width: 0px;
     border-bottom-width: 5px;
-    min-width: 950px;
+    min-width: 768px;
 }
 ul {
     padding: 0px;
     margin: 0px;
 }
 ul a{
-    color: white;
     text-decoration: none;
+    color: white;
+    padding: 15px;
+    padding-left: 17px;
+    padding-right: 17px;
 }
 li.nav{
     display: inline-block;
-    padding: 20px;
+    padding-left: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 li.nav:hover {
     background-color: #A44A0A;
 }
 main {
     display: grid;
-    grid-template-columns: min-content auto;
-    gap: 15px;
-    width: 100%
+    grid-template-columns: 30% 69%;
+    gap: 1%;
+    width: 100%;
+    min-width: 768px;
 }
 aside {
     display: inline-block;
+    background-color: #ffb785;
+    margin: 0px;
     padding-right: 20px;
     padding-left: 20px;
-    min-width: 450px;
-    background-color: #ffb785;
 }
 #inhoud {
     display: inline-block;
     min-height: 500px;
-}
-#hOpleiding{
-    padding-top: 10px;
+    padding-right: 1%;
 }
 footer {
-    height: 120px;
-    min-width: 950px;
     display:flex;
     background-color:#d15f0f;
+    height: 120px;
+    min-width: 768px;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -75,17 +79,26 @@ footer {
 footer ul{
     list-style-type: none;
 }
-img {
-    width: 400px;
-    margin: 5px;
-    margin-left: 25px;
-    margin-right: 25px;
-}
+/*Home*/
 h1 {
     margin-top: 40px;
 }
 .titelKleur {
     color: #d15f0f;
+}
+.onderTitel {
+    font-weight: bold;
+}
+#imgTrompet {
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+#imgTrompetSpeler {
+    width: 360px;
+}
+#imgSaxofoon {
+    width: 360px;
 }
 /*over ons*/
 .overOnsArticle {
@@ -95,29 +108,22 @@ h1 {
 .overOnsArticle p {
     margin-bottom: 30px;
 }
+#imgGroot {
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
 #fotoHannah {
     float: right;
-    width: auto;
-    height: 500px;
+    width: 30%;
+    max-width: 290px;
 }
 #fotoJesse {
     float: left;
-    width: auto;
-    height: 500px;
+    width: 30%;
+    max-width: 290px;
 }
 /*blog*/
-article {
-    border-radius: 10px;
-    background-color: rgb(255 222 199);
-    padding: 5px;
-    margin-bottom: 10px;
-}
-article:hover {
-    border-radius: 10px;
-    background-color: #ffb785;
-    padding: 5px;
-    margin-bottom: 10px;
-}
 .popOut {
     list-style-type: none;
 }
@@ -131,19 +137,37 @@ article:hover {
 #btnNewArticle {
     margin-top: 25px;
 }
+.blogInhoud article {
+    border-radius: 10px;
+    background-color: rgb(255 222 199);
+    padding: 5px;
+    margin-bottom: 10px;
+}
+.blogInhoud article:hover {
+    border-radius: 10px;
+    background-color: #ffb785;
+    padding: 5px;
+    margin-bottom: 10px;
+}
 /*article form*/
 #labelToevoegen {
     font-weight: bold;
     font-size: large;
 }
-#articleForm textarea {
-    width: 500px;
+#datepicker {
+    width: auto;
 }
 #auteurInput {
-        width: 500px;
+    width: 500px;
+    border-radius: 5px;
 }
 #articleForm input {
     margin-left: 2px;
+    border-radius: 5px;
+}
+#articleForm textarea {
+    width: 500px;
+    border-radius: 5px;
 }
 #btnOpslaan {
     width: 100px;
@@ -152,29 +176,25 @@ article:hover {
     background-color: #d15f0f;
     border-style: none;
 }
-/*tarieven streepjes*/
-hr {
-    margin-right: 20px;
-}
 /*contact*/
 iframe {
-    width: 450px;
-    height: 450px;
+    width: 100%;
+    height: 400px;
 }
 form table{
     width: 100%;
 }
 input  {
     border-radius: 5px;
-    width: 96%;
+    width: 100%;
 }
-select {
+#contactForm select {
     border-radius: 5px;
-    width: 96.5%;
+    width: 100.75%;
 }
 #contactForm textarea {
     border-radius: 5px;
-    width: 96%;
+    width: 100%;
     height: 200px;
 }
 #btnVerzend {
@@ -185,70 +205,8 @@ select {
     border-style: none;
 }
 
+
 /*Mobile*/
 @media only screen and (max-width: 768px) {
-    li.nav{
-        display: block;
-        padding: 20px;
-    }
-    nav ul{
-        width: 100%;
-    }
-    nav li{
-        text-align: center;
-    }
-    aside{
-        display: block;
-        padding-top: 10px;
-        padding-bottom: 20px;
-    }
-    main{
-        display: inline-block;
-        width: 100%;
-    }
-    #inhoud {
-        display: block;
-        padding-left: 20px;
-        padding-right: 20px;
-        padding-bottom: 20px;
-    }
-    img {
-        width: 150px;
-    }
-    .imgGroot {
-        width: 90%;
-    }
-    #fotoHannah {
-        float: right;
-        width: auto;
-        height: 200px;
-    }
-    #fotoJesse {
-        float: left;
-        width: auto;
-        height: 200px;
-    }
-    iframe {
-        width: 99%;
-        height: 450px;
-    }
-    form table{
-        width: 100%;
-    }
-    input  {
-        border-radius: 5px;
-        width: 96%;
-    }
-    select {
-        border-radius: 5px;
-        width: 96.5%;
-    }
-    textarea {
-        border-radius: 5px;
-        width: 96%;
-        height: 200px;
-    }
-    #btnVerzend {
-        width: 100px;
-    }
+
 }
